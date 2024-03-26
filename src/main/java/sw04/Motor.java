@@ -1,8 +1,9 @@
 package sw04;
 
 import sw04.Switchable;
+import sw05.CountingSwitchable;
 
-public class Motor implements Switchable {
+public class Motor extends CountingSwitchable {
 
     private boolean isSwitchedOn;
     private int rpm;
@@ -14,6 +15,7 @@ public class Motor implements Switchable {
 
     @Override
     public void switchOn() {
+        super.switchOn();
         if (isSwitchedOff()) {
             isSwitchedOn = true;
             rpm = 6000;
@@ -22,6 +24,7 @@ public class Motor implements Switchable {
 
     @Override
     public void switchOff() {
+        super.switchOff();
         isSwitchedOn = false;
         rpm = 0;
     }
@@ -34,6 +37,10 @@ public class Motor implements Switchable {
     @Override
     public boolean isSwitchedOff() {
         return !isSwitchedOn;
+    }
+
+    public int getCounter() {
+        return super.getCounter();
     }
 
     public int getRpm() {
