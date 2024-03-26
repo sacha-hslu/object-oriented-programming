@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"Switchable","l":"isSwitchedOff()"},{"p":"<Unnamed>","c":"Switchable","l":"isSwitchedOn()"},{"p":"<Unnamed>","c":"Switchable","l":"switchOff()"},{"p":"<Unnamed>","c":"Switchable","l":"switchOn()"}];updateSearchResults();

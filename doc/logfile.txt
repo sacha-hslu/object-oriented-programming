@@ -1,0 +1,166 @@
+Project documentation
+<---- javadoc command: ---->
+javadoc
+-sourcepath
+/Users/sachavogel/workspace-studies/oop
+-source
+17
+-classpath
+/Applications/BlueJ.app/Contents/Java/bluejcore.jar:/Applications/BlueJ.app/Contents/Java/javafx-base-20.0.1.jar:/Applications/BlueJ.app/Contents/Java/javafx-graphics-20.0.1.jar:/Applications/BlueJ.app/Contents/Java/javafx-controls-20.0.1.jar:/Applications/BlueJ.app/Contents/Java/javafx-fxml-20.0.1-mac.jar:/Applications/BlueJ.app/Contents/Java/javafx-controls-20.0.1-mac.jar:/Applications/BlueJ.app/Contents/Java/javafx-web-20.0.1-mac.jar:/Applications/BlueJ.app/Contents/Java/javafx-media-20.0.1.jar:/Applications/BlueJ.app/Contents/Java/javafx-base-20.0.1-mac.jar:/Applications/BlueJ.app/Contents/Java/javafx-media-20.0.1-mac.jar:/Applications/BlueJ.app/Contents/Java/javafx-graphics-20.0.1-mac.jar:/Applications/BlueJ.app/Contents/Java/javafx-swing-20.0.1-mac.jar:/Applications/BlueJ.app/Contents/Java/junit-4.12.jar:/Applications/BlueJ.app/Contents/Java/junit-jupiter-params-5.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-jupiter-api-5.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-jupiter-engine-5.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-platform-suite-api-1.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-vintage-engine-5.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-jupiter-5.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-platform-engine-1.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-platform-launcher-1.5.2.jar:/Applications/BlueJ.app/Contents/Java/junit-platform-commons-1.5.2.jar:/Applications/BlueJ.app/Contents/Java/hamcrest-core-1.3.jar:/Applications/BlueJ.app/Contents/Java/opentest4j-1.2.0.jar:/Applications/BlueJ.app/Contents/Java/lang-stride.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.base.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.controls.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.fxml.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.graphics.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.media.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.properties.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.swing.jar:/Applications/BlueJ.app/Contents/Java/javafx/javafx.web.jar:/Users/sachavogel/workspace-studies/oop
+-d
+/Users/sachavogel/workspace-studies/oop/doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-doctitle
+oop
+-windowtitle
+oop
+-author
+-version
+-nodeprecated
+-package
+-Xdoclint:none
+-link
+https://docs.oracle.com/en/java/javase/17/docs/api/
+src.test.java.sw02
+src.test.java.sw03
+src.main.java.sw02
+src.main.java.sw03
+<---- end of javadoc command ---->
+Loading source files for package src.test.java.sw02...
+Loading source files for package src.test.java.sw03...
+Loading source files for package src.main.java.sw02...
+Loading source files for package src.main.java.sw03...
+Constructing Javadoc information...
+warning: unknown enum constant Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+warning: unknown enum constant Status.STABLE
+Building index for all the packages and classes...
+Standard Doclet version 17.0.4.1+1
+Building tree for all the packages and classes...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/main/java/sw03/Demo.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/test/java/sw03/DemoTest.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/main/java/sw03/Point.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/test/java/sw03/PointTest.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/main/java/sw02/PrimitiveDatatypes.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/test/java/sw02/PrimitiveDatatypesTest.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/main/java/sw02/Temperatur.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/main/java/sw02/Temperatur.Element.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/test/java/sw02/TemperaturTest.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/main/java/sw02/package-summary.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/main/java/sw02/package-tree.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/main/java/sw03/package-summary.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/main/java/sw03/package-tree.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/test/java/sw02/package-summary.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/test/java/sw02/package-tree.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/test/java/sw03/package-summary.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/src/test/java/sw03/package-tree.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/overview-tree.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/index.html...
+Building index for all classes...
+Generating /Users/sachavogel/workspace-studies/oop/doc/allclasses-index.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/allpackages-index.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/index-all.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/overview-summary.html...
+Generating /Users/sachavogel/workspace-studies/oop/doc/help-doc.html...
+100 warnings
