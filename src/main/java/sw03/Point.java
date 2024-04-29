@@ -26,6 +26,16 @@ public final class Point {
     }
 
     /**
+     * Copies to new point - copy constructor
+     *
+     * @param point
+     *        point to copy
+     */
+    public Point(Point point) {
+        this(point.getX(), point.getY());
+    }
+
+    /**
      * Calculate the current quadrant on the coordinate system.
      * If the point is touching any axis it returns zero.
      *
