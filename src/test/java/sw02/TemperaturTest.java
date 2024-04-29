@@ -57,7 +57,24 @@ class TemperaturTest {
         temperature.addFahrenheit(9);
         assertEquals(31.999999284744263, temperature.getCelsius());
         assertEquals(89.5999971866608, temperature.calculateFahrenheit());
+    }
 
+    @Test
+    void setCelsius_temperatureTooHigh_exceptionThrown() {
+        Temperatur temperature = Temperatur.createFromCelsius(0);
+
+        var e = assertThrows(IllegalArgumentException.class, () -> temperature.setCelsius(3001));
+
+        assertEquals("This temperature is not allowed", e.getMessage());
+    }
+
+    @Test
+    void setCelsius_temperatureTooLow_exceptionThrown() {
+        Temperatur temperature = Temperatur.createFromCelsius(0);
+
+        var e = assertThrows(IllegalArgumentException.class, () -> temperature.setCelsius(-3001));
+
+        assertEquals("This temperature is not allowed", e.getMessage());
     }
 
     @Test

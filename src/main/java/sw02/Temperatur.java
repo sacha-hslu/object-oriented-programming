@@ -12,12 +12,20 @@ public class Temperatur {
 
     private double celsius;
 
-    public Temperatur() {
+    Temperatur() {
         this(20);
     }
 
-    public Temperatur(final double celsius) {
-        this.celsius = celsius;
+    Temperatur(final double celsius) {
+        setCelsius(celsius);
+    }
+
+    public static Temperatur createFromCelsius(final double celsius) {
+        return new Temperatur(celsius);
+    }
+
+    public static Temperatur createFromKelvin(final double kelvin) {
+        return createFromCelsius(kelvin - 273.15);
     }
 
     /**
@@ -47,7 +55,7 @@ public class Temperatur {
      *        Number of Celsius to add to the current temperature
      */
     public void addCelsius(final double relativeCelsius) {
-        celsius = celsius + relativeCelsius;
+        setCelsius(celsius + relativeCelsius);
     }
 
     /**
@@ -58,7 +66,7 @@ public class Temperatur {
      *        Number of Kelvin to add to the current temperature
      */
     public void addKelvin(final double relativeKelvin) {
-        celsius = celsius + relativeKelvin;
+        setCelsius(celsius + relativeKelvin);
     }
 
     /**
@@ -70,7 +78,7 @@ public class Temperatur {
      */
     public void addFahrenheit(final double relativeFahrenheit) {
         var calculatedFahrenheit = calculateFahrenheit() + relativeFahrenheit;
-        celsius = (calculatedFahrenheit - 32) / 1.8;
+        setCelsius((calculatedFahrenheit - 32) / 1.8);
     }
 
     /**
@@ -83,6 +91,9 @@ public class Temperatur {
     }
 
     public void setCelsius(double celsius) {
+        if (celsius > 3000 || celsius < -3000) {
+            throw new IllegalArgumentException("This temperature is not allowed");
+        }
         this.celsius = celsius;
     }
 
