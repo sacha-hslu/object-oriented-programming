@@ -1,8 +1,15 @@
 package sw10;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Scanner;
 
 public class TemperaturMain {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(TemperaturMain.class);
+
     /*
     b)  Code funktioniert nicht wie erwartet. Beim Eingeben von "exit" wir eine NumberFormatException geworfen
     c)  Diese Exception zeigt an, wenn ein String in eine Java Number convertet wird -> float Zuweisung
@@ -12,15 +19,15 @@ public class TemperaturMain {
         String input;
         Scanner scanner = new Scanner(System.in);
         do {
-            System.out.println("Bitte Temperatur eingeben (oder 'exit' zum Beenden): ");
+            LOGGER.info("Bitte Temperatur eingeben (oder 'exit' zum Beenden): ");
             input = scanner.next();
             try {
                 float value = Float.valueOf(input);
-                System.out.println(value);
+                LOGGER.info(String.valueOf(value));
             } catch (NumberFormatException e) {
-                System.out.println("Cannot cast value into float: " + e.getMessage());
+                LOGGER.error("Cannot cast value into float: ", e);
             }
         } while (!"exit".equals(input));
-        System.out.println("Programm beendet.");
+        LOGGER.info("Programm beendet.");
     }
 }
