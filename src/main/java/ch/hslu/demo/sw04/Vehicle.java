@@ -1,20 +1,25 @@
- 
 package ch.hslu.demo.sw04;
+
+import java.beans.PropertyChangeEvent;
 
 /**
  * The Vehicle class represents a vehicle with a motor and a lamp.
  *
  * @author Sacha Vogel
  */
-public class Vehicle {
+public class Vehicle implements MotorStateListener {
     private final Motor motor;
     private final Switchable lamp;
 
     public Vehicle() {
-        this.motor = new Motor();
-        this.lamp = new Lamp();
+        this(new Motor());
     }
 
+    public Vehicle(Motor motor) {
+        this.motor = motor;
+        this.lamp = new Lamp();
+    }
+    
     /**
      * Starts the vehicle and its devices up.
      *
@@ -34,4 +39,13 @@ public class Vehicle {
         lamp.switchOff();
     }
 
+    @Override
+    public void notifyMotorState(MotorStateEnum state) {
+        System.out.println("motor changed state to: " + state);
+    }
+
+    @Override
+    public void propertyChange(PropertyChangeEvent evt) {
+        // TODO what to do here?
+    }
 }
