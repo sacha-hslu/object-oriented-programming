@@ -17,7 +17,7 @@ public class VehicleMotorStateIntegrationTest {
     @Test
     void testEventListener() {
         Vehicle vehicle = new Vehicle(motor);
-        motor.registerListener(vehicle);
+        motor.addPropertyChangeListener(vehicle);
         vehicle.startVehicle();
         motor.reportProblem();
         vehicle.stopVehicle();

@@ -4,12 +4,13 @@ package ch.hslu.demo.sw04;
 import ch.hslu.demo.sw05.CountingSwitchable;
 
 import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Motor extends CountingSwitchable {
 
-    private final List<MotorStateListener> listeners;
+    private final List<PropertyChangeListener> listeners;
     private boolean isSwitchedOn;
     private int rpm;
 
@@ -51,17 +52,17 @@ public class Motor extends CountingSwitchable {
         return !isSwitchedOn;
     }
 
-    public void registerListener(MotorStateListener listener) {
+    public void addPropertyChangeListener(PropertyChangeListener listener) {
         listeners.add(listener);
     }
 
-    public void deregisterListener(MotorStateListener listener) {
+    public void removePropertyChangeListener(PropertyChangeListener listener) {
         listeners.remove(listener);
     }
 
     private void notifyMotorState(MotorStateEnum motorState) {
         PropertyChangeEvent changeEvent = new PropertyChangeEvent("motor", "motorState", null, motorState);
-        for (MotorStateListener listener : listeners) {
+        for (PropertyChangeListener listener : listeners) {
             listener.propertyChange(changeEvent);
         }
     }
@@ -74,7 +75,7 @@ public class Motor extends CountingSwitchable {
         return rpm;
     }
 
-    public List<MotorStateListener> getListeners() {
+    public List<PropertyChangeListener> getListeners() {
         return listeners;
     }
 }

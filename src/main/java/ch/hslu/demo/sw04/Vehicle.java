@@ -18,7 +18,7 @@ public class Vehicle implements MotorStateListener {
     public Vehicle(Motor motor) {
         this.motor = motor;
         this.lamp = new Lamp();
-        this.motor.registerListener(this);
+        this.motor.addPropertyChangeListener(this::handleMotorEvent);
     }
 
     /**
@@ -45,12 +45,12 @@ public class Vehicle implements MotorStateListener {
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
         if (evt.getSource().equals("motor")) {
-            handleMotorEvent(MotorStateEnum.valueOf(evt.getNewValue().toString()));
+            handleMotorEvent(evt);
         }
     }
 
-    private void handleMotorEvent(MotorStateEnum state) {
-        if (MotorStateEnum.ON.equals(state)) {
+    private void handleMotorEvent(PropertyChangeEvent evt) {
+        if (MotorStateEnum.ON.equals(MotorStateEnum.valueOf(evt.getNewValue().toString()))) {
             startVehicle();
         } else {
             stopVehicle();

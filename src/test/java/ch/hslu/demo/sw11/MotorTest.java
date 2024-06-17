@@ -21,7 +21,7 @@ class MotorTest {
     void registerListener_vehicle_listenerContained() {
         Vehicle listener = new Vehicle();
 
-        testee.registerListener(listener);
+        testee.addPropertyChangeListener(listener);
 
         assertEquals(1, testee.getListeners().size());
         assertTrue(testee.getListeners().contains(listener));
@@ -30,12 +30,12 @@ class MotorTest {
     @Test
     void deregisterListener_registerListener_listenerRemoved() {
         Vehicle listener = new Vehicle();
-        testee.registerListener(listener);
+        testee.addPropertyChangeListener(listener);
         assertEquals(1, testee.getListeners().size());
         assertTrue(testee.getListeners().contains(listener));
 
-        testee.deregisterListener(listener);
-        
+        testee.removePropertyChangeListener(listener);
+
         assertTrue(testee.getListeners().isEmpty());
     }
 
