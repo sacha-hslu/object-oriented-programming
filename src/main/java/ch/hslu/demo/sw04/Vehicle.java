@@ -18,15 +18,18 @@ public class Vehicle implements MotorStateListener {
     public Vehicle(Motor motor) {
         this.motor = motor;
         this.lamp = new Lamp();
+        this.motor.registerListener(this);
     }
-    
+
     /**
      * Starts the vehicle and its devices up.
      *
      * @return Current rpm of the motor
      */
     public int startVehicle() {
-        motor.switchOn();
+        if (motor.isSwitchedOff()) {
+            motor.switchOn();
+        }
         lamp.switchOn();
         return motor.getRpm();
     }
@@ -40,12 +43,21 @@ public class Vehicle implements MotorStateListener {
     }
 
     @Override
-    public void notifyMotorState(MotorStateEnum state) {
-        System.out.println("motor changed state to: " + state);
+    public void propertyChange(PropertyChangeEvent evt) {
+        if (evt.getSource().equals("motor")) {
+            handleMotorEvent(MotorStateEnum.valueOf(evt.getNewValue().toString()));
+        }
     }
 
-    @Override
-    public void propertyChange(PropertyChangeEvent evt) {
-        // TODO what to do here?
+    private void handleMotorEvent(MotorStateEnum state) {
+        if (MotorStateEnum.ON.equals(state)) {
+            startVehicle();
+        } else {
+            stopVehicle();
+        }
+    }
+
+    public Motor getMotor() {
+        return this.motor;
     }
 }

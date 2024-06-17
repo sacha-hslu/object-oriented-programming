@@ -3,6 +3,7 @@ package ch.hslu.demo.sw04;
 
 import ch.hslu.demo.sw05.CountingSwitchable;
 
+import java.beans.PropertyChangeEvent;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,8 +60,9 @@ public class Motor extends CountingSwitchable {
     }
 
     private void notifyMotorState(MotorStateEnum motorState) {
+        PropertyChangeEvent changeEvent = new PropertyChangeEvent("motor", "motorState", null, motorState);
         for (MotorStateListener listener : listeners) {
-            listener.notifyMotorState(motorState);
+            listener.propertyChange(changeEvent);
         }
     }
 
