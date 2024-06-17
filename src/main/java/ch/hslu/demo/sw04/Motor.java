@@ -27,7 +27,7 @@ public class Motor extends CountingSwitchable {
             isSwitchedOn = true;
             rpm = 6000;
         }
-        notifyMotorState(MotorStateEnum.ON);
+        firePropertyChangeEvent(MotorStateEnum.ON);
     }
 
     @Override
@@ -35,11 +35,12 @@ public class Motor extends CountingSwitchable {
         super.switchOff();
         isSwitchedOn = false;
         rpm = 0;
-        notifyMotorState(MotorStateEnum.OFF);
+        firePropertyChangeEvent(MotorStateEnum.OFF);
     }
 
     public void reportProblem() {
-        notifyMotorState(MotorStateEnum.PROBLEM);
+        switchOff();
+        firePropertyChangeEvent(MotorStateEnum.PROBLEM);
     }
 
     @Override
@@ -60,7 +61,7 @@ public class Motor extends CountingSwitchable {
         listeners.remove(listener);
     }
 
-    private void notifyMotorState(MotorStateEnum motorState) {
+    private void firePropertyChangeEvent(MotorStateEnum motorState) {
         PropertyChangeEvent changeEvent = new PropertyChangeEvent("motor", "motorState", null, motorState);
         for (PropertyChangeListener listener : listeners) {
             listener.propertyChange(changeEvent);

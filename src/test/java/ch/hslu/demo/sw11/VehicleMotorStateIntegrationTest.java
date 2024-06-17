@@ -5,6 +5,8 @@ import ch.hslu.demo.sw04.Vehicle;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class VehicleMotorStateIntegrationTest {
 
     private Motor motor;
@@ -17,9 +19,9 @@ public class VehicleMotorStateIntegrationTest {
     @Test
     void testEventListener() {
         Vehicle vehicle = new Vehicle(motor);
-        motor.addPropertyChangeListener(vehicle);
         vehicle.startVehicle();
+        assertTrue(motor.isSwitchedOn());
         motor.reportProblem();
-        vehicle.stopVehicle();
+        assertTrue(motor.isSwitchedOff());
     }
 }

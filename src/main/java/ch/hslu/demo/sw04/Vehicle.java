@@ -27,9 +27,7 @@ public class Vehicle implements MotorStateListener {
      * @return Current rpm of the motor
      */
     public int startVehicle() {
-        if (motor.isSwitchedOff()) {
-            motor.switchOn();
-        }
+        motor.switchOn();
         lamp.switchOn();
         return motor.getRpm();
     }
@@ -51,9 +49,9 @@ public class Vehicle implements MotorStateListener {
 
     private void handleMotorEvent(PropertyChangeEvent evt) {
         if (MotorStateEnum.ON.equals(MotorStateEnum.valueOf(evt.getNewValue().toString()))) {
-            startVehicle();
+            System.out.println("motor is on");
         } else {
-            stopVehicle();
+            System.out.println("motor is off");
         }
     }
 
